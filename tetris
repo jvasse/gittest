@@ -42,8 +42,11 @@ AJD : travail sur le tetris : determination du "spawn" : celui en haut au milieu
 
 ->   
 
+
+
+
 DEMAIN : Github : commandes ... + code des coordonées etc etc ...
-	fct° envoi  -> string ? 
+	fct° envoi  -> string ? -> JEAN 
 			
 
 mails : andré 
@@ -55,4 +58,92 @@ mails : andré
 
 
 
-testsetsetst
+
+
+
+Formes :
+
+Nom en memoire  Taille hors tout(avec rotations)
+
+"CARRE" 	2x2
+"L"		3x3
+"S" 		3x3
+"T" 		3x3 
+"Barre"		4x4
+
+Arbitrairment : on va decider de faire des tableaux de 3x3  : cela implique une augmentation de la taille du carré et une reduction de la taille de la barre. 
+	On aura donc : 
+
+"CARRE" 	2x2
+"L"		3x3
+"S" 		3x3
+"T" 		3x3 
+"Barre"		4x4
+
+decision des samples : 
+
+
+
+
+
+Pourle jeu : 
+
+
+collision si 2 structure rentrent en contact && des blocs de ces structures sont voisins et qu'on propose d'avancer
+
+en mémoire de chaque bloc : 
+
+Synthèse du doc : 
+
+Forme[CARRE[],L[],S[],T[],BARRE[]]
+
+	CARRE[1,2,3,4]
+
+Pour la structure :                              par rapport au bloc : ( on definit un bloc master 																de la struct ? 
+
+		1 : {1,2,3,4,5,6,7,8,9}   				1 : {} 
+		2 : {1,2,3,4,5,6,7,8,9}					2 : {}
+		3 : {1,2,3,4,5,6,7,8,9}
+		4 : {1,2,3,4,5,6,7,8,9}
+
+	L[1,2,3,4]
+
+		1 : {1,4,7,8}
+		2 : {1,2,3,4}
+		3 : {2,3,6,9}
+		4 : {6,7,8,9}
+
+	S[1,2,3,4]	
+
+		1 : {1,4,5,8}
+		2 : {2,3,4,5}
+		3 : {1,4,5,8}
+		4 : {2,3,4,5}
+
+	T[1,2,3,4]
+
+		1 : {5,7,8,9}
+		2 : {1,4,5,7}
+		3 : {1,2,3,5}
+		4 : {3,5,6,9}
+
+	BARRE[1,2,3,4]
+
+		1 : {1,4,7}
+		2 : {7,8,9}
+		3 : {1,4,7}
+		4 : {7,8,9}
+
+
+au spawn : structure centrée autour du bloc "2" 
+
+
+
+
+
+
+
+
+
+
+
