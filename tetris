@@ -1,0 +1,54 @@
+sendtopos((posX,posY),data1,fctdefin)
+	
+	if posX,posY sont bonne a 1 pret ( next hop = le bon)  : 
+		envoi sur bon port avec execute fction de fin sur bloc apres 
+	if posx ou/et posy pas bonne de + de 1 : 
+		routage + envoi sur port determiné avec (sendtopos)
+
+Routage : 
+
+si x = posx 
+	si y=posY 		-> on est sur le bon bloc
+	sinon si y< 	->envoi sur "up"
+	sinon           ->envoi sur "down"
+
+sinon si x<
+	-> envoi sur EAST
+
+sinon 
+	-> envoi sur WEST 
+
+
+
+
+
+
+
+		PIRANDA & BOURGEOIS : 
+
+GLOBAL : 
+
+	> Add (Election + distrib positions) à la bibli -> ici on a deja 300 lignes avant de commencer
+	> commandes 	
+	
+
+
+
+
+AJD : travail sur le tetris : determination du "spawn" : celui en haut au milieu
+		pour ça : determination de largeur + hauteur ( arbitraire : largeur est un nb impaire pour le moment )
+			-> fonction de contact via coordonées ( incluant: - routage
+									  - saut jusqu'au dernier, puis execution de la fonction spécifiée au debut) 
+
+->   
+
+DEMAIN : Github : commandes ... + code des coordonées etc etc ...
+	fct° envoi  -> string ? 
+			
+
+mails : andré 
+	jbourgeois : github
+	
+	
+	se renseigner sur le fonctionnement du gothub
+	definir les bases arbitraires des formes : où on les stocke, quelles formes on prend  ...
