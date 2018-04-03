@@ -140,6 +140,13 @@ au spawn : structure centrée autour du bloc "2"
 
 
 
+Definition d'un bloc "masterpiece" <- fct°
+	selection de la forme entrée precedemment en memoire <-  random ?
+		envoi aux autres de la piece leur "etat"
+
+--> entrée des "pieces" en mémoire 
+
+
 
 
 
