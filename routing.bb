@@ -18,6 +18,7 @@ threadvar  uint8_t nbreWaitedAnswers;
 threadvar byte xplusBorder;
 threadvar byte yplusBorder;
 threadvar uint8_t countspawn;
+threadvar uint8_t spawn;
 
 
 threaddef  #define MYCHUNKS 12
@@ -161,7 +162,7 @@ byte sendCoordChunk(PRef p) {
       if (thisChunk == NULL) return 0;
       byte sender = faceNum(thisChunk);
 
-      //delayMS(100);
+      delayMS(100);
 
 
       //***Je reçois des coordonnées identiques aux miennes***//
@@ -209,7 +210,7 @@ byte sendCoordChunk(PRef p) {
           nbreWaitedAnswers++;
         }
 
-        //delayMS(1000);
+        delayMS(1000);
 
 
       if (nbreWaitedAnswers==0 && lien != NO_LIEN){
@@ -230,7 +231,7 @@ byte sendCoordChunk(PRef p) {
    if (thisChunk==NULL) return 0;
    uint8_t sender=faceNum(thisChunk);
 
-   //delayMS(100);
+   delayMS(100);
 
    if ( (sender==xplusBorder && thisChunk->data[0] == (position[0]+1) && thisChunk->data[1] == position[1]) ||
         (sender==5-xplusBorder && thisChunk->data[0] == (position[0]-1) && thisChunk->data[1] == position[1]) ||
@@ -263,7 +264,7 @@ byte sendCoordChunk(PRef p) {
 
 
        else if (thisNeighborhood.n[EAST] == VACANT && thisNeighborhood.n[UP] == VACANT ){
-         //delayMS(1000);
+         delayMS(1000);
 
        uint8_t height = position[1]-126;
        sendExecOn(DOWN,127,127,height,148);
@@ -272,7 +273,7 @@ byte sendCoordChunk(PRef p) {
         }
       }
     }
- //delayMS(1000);
+ delayMS(1000);
    return 1;
  }
 
@@ -282,7 +283,7 @@ byte sendCoordChunk(PRef p) {
 byte sendExecOn(PRef p, byte px, byte py, byte donnee, byte fonc) {
 	Chunk *c = getFreeUserChunk();
 
-    //delayMS(200);
+    delayMS(200);
 
     if (c!=NULL) {
 
@@ -318,7 +319,7 @@ byte sendExecOn(PRef p, byte px, byte py, byte donnee, byte fonc) {
       //printf("%d, (%d;%d) \n",(int)getGUID(),position[0],position[1]);
 
       //setColor(RED);
-      //delayMS(300);
+      delayMS(300);
 
 			//c->data[0] = px;
 			//c->data[1] = py;
@@ -375,7 +376,7 @@ byte getSpawn(uint8_t donnee, uint8_t t){
 
 
     if (countspawn == 2){
-    //delayMS(200);
+    delayMS(200);
       sendExecOn(WEST,127+tab[0],126+tab[1],0,166);
       return 0;
   }
